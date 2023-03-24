@@ -1,0 +1,6 @@
+
+Replace Name               =  dir | Rename-Item -NewName {$_.name -replace "Maharashtra", "MH-"}
+
+Add Starting Name          =  dir -exclude "New-*" | Rename-Item -NewName {"New-" + $_.name}
+
+Add Name befor extension   =  dir | Rename-Item -NewName {$_.basename + "-Old" + $_.extension}
